@@ -10,3 +10,29 @@
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
   --activeItem: #f799a354;
 }
+
+
+.App {
+  background: #2980B9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #d7caca, #6DD5FA, #2980B9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e7d9d9, #6DD5FA, #2980B9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;  /* 100vh => 960px   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  grid-template-columns: 11rem auto 20rem;
+
+}
+
+.AppGlass {
+  display: grid;
+  width: 97%;
+  height: 97%;
+  border-radius: 2rem;
+  background-color: var(--glass);
+}
