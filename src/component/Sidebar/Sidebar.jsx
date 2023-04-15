@@ -1,14 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'; 
 import './sidebar.css'
-import Logo from '../../imgs/logo.png'
+import Logo from '../../imgs/wolf.png'
+import {SidebarData} from '../../Data/data.js'
 
-export default function sidebar() {
+
+const Sidebar = () => {
+  const [selected , setSelected] = useState(0);
+
   return (
+
     <div className="sidebar">
         <div className="logo">
             <img src={Logo} alt="logo" />
-            <span>Lazy<span>B</span>log</span>
+            <span>Lazy<span>W</span>olf</span>
+        </div>
+
+        <div className="menu">
+          {SidebarData.map((item,index)=>(
+            
+              <div className={selected === index ? "menuitems active":"menuitems"}  
+              key={index}
+              onClick={()=>setSelected(index)}             
+              >
+                  <item.icon/>
+                    <span>{item.title}</span>
+              </div>
+            
+          ))}
+          
         </div>
     </div>
   )
 }
+
+export default Sidebar;

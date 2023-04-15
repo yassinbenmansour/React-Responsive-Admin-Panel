@@ -13,26 +13,43 @@
 
 
 .App {
-  background: #2980B9;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #d7caca, #6DD5FA, #2980B9);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #e7d9d9, #6DD5FA, #2980B9);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;  /* 100vh => 960px   */
+  /* padding: 0.5rem 3.5rem; */
+  color: var(--black);
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #b6e1e9 51.55%,
+    #61c1e8 90.85%
+  );
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
-  grid-template-columns: 11rem auto 20rem;
-
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .AppGlass {
   display: grid;
-  width: 97%;
   height: 97%;
+  width: 97%;
+  background: var(--glass);
   border-radius: 2rem;
-  background-color: var(--glass);
+  gap: 16px;
+  grid-template-columns: 14rem auto 20rem;
+  overflow: hidden;
 }
+
+@media screen and (max-width: 1200px) {
+  .AppGlass{
+    grid-template-columns: 20% 50% auto;
+    overflow-y: scroll;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .AppGlass{
+    grid-template-columns: 1fr;
+  } 
+}
+
+
