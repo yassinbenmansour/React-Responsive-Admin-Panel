@@ -94,3 +94,21 @@ export const cardsData = [
     },
   ];
   
+
+  export const UpdatesData = [
+    {
+      name: "Andrew Thomas",
+      noti: "has ordered Apple smart watch 2500mh battery.",
+      time: "25 seconds ago",
+    },
+    {
+      name: "James Bond",
+      noti: "has received Samsung gadget for charging battery.",
+      time: "30 minutes ago",
+    },
+    {
+      name: "Iron Man",
+      noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
+      time: "2 hours ago",
+    },
+  ];
